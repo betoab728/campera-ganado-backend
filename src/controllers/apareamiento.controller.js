@@ -17,6 +17,7 @@ const getApareamientos = async (req, res) => {
 
 const addApareamiento = async (req, res) => {
     const { idhembra, idmacho, fecha, resultado, observaciones } = req.body;
+    console.log("body: ",req.body);
     
     try {
         const [result] = await pool.query(
